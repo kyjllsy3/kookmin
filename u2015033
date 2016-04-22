@@ -1,0 +1,29 @@
+Enter file contents hereteam1 = {
+    "forward": 88,
+    "shoot": 90,
+    "pass": 98,
+    "stamina": 87,
+    "body": 80,
+    "defence": 88,
+}
+
+team2 = {
+    "forward": 92,
+    "shoot": 95,
+    "pass": 93,
+    "stamina": 80,
+    "body": 90,
+    "defence": 77,    
+}
+def tendency(score):
+    if (score.get("forward")+score.get("shoot")) > 180:
+        print("공격력이 강하다")
+    elif (score.get("pass")+score.get("stamina")) > 180:
+        print("조직력이 강하다")
+    elif (score.get("body")+score.get("defence")) > 180:
+        print("수비력이 강하다")
+    else:
+        print("특성이 없다")
+
+tendency(team1)
+tendency(team2)
